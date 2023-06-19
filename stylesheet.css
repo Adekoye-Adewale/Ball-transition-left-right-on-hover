@@ -1,0 +1,46 @@
+body {
+    font-family: 'Helvetica now display', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #00de4e;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+}
+
+.container-wrapper {
+    position: relative;
+    left: 20px;
+    top: 100px;
+    width: 500px;
+    height: 250px;
+    background-color: #004e00;
+    cursor: pointer;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container-wrapper h1 {
+    font-size: 5em;
+    font-weight: 800;
+    margin: 0px auto;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: #4e0900;
+    transition: all 700ms ease-in-out 10ms;
+    z-index: 199;
+}
+
+.container-wrapper:hover .circle {
+    left: calc(100% - 200px);
+    color: #000000;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
