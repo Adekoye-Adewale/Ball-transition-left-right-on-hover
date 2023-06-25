@@ -35,12 +35,48 @@ body {
     border-radius: 100px;
     background-color: #4e0900;
     transition: all 700ms ease-in-out 10ms;
-    z-index: 199;
+    z-index: 0;
+    color: transparent;
+    background-clip: content-box;
 }
 
 .container-wrapper:hover .circle {
     left: calc(100% - 200px);
+    z-index: 1;
     color: #000000;
     background-clip: text;
     -webkit-background-clip: text;
+}
+
+.bg-blue {
+    margin-top: 200px;
+    background-color: #2e57c9;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 200px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out 10ms;
+}
+
+.bg-blue p {
+    line-height: 1.8em;
+}
+
+.btn {
+    padding: 5px 12px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #2e57c9;
+    transition: all 300ms ease-in-out 100ms;
+}
+
+.bg-blue:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bg-blue:hover .btn {
+    background-color: #2e57c9;
+    color: #ffffff;
 }
