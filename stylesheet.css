@@ -5,7 +5,7 @@ body {
     background-color: #00de4e;
     padding: 0px;
     margin: 0px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .container-wrapper {
@@ -14,38 +14,51 @@ body {
     top: 100px;
     width: 500px;
     height: 250px;
-    background-color: #004e00;
+    border-radius: 15px;
+    background-color: #ffffff;
     cursor: pointer;
     padding: 20px;
-    overflow: hidden;
 }
 
-.container-wrapper h1 {
+h1 {
     font-size: 5em;
     font-weight: 800;
     margin: 0px auto;
-}
+    padding: 10px;
 
-.circle {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: #4e0900;
-    transition: all 700ms ease-in-out 10ms;
-    z-index: 0;
-    color: transparent;
-    background-clip: content-box;
+    top: 30px;
+    left: 10px;
 }
 
-.container-wrapper:hover .circle {
-    left: calc(100% - 200px);
-    z-index: 1;
-    color: #000000;
-    background-clip: text;
-    -webkit-background-clip: text;
+.circle h1 {
+    color: #ffffff;
+    transition: all 1500ms ease-in-out 200ms;
+    clip-path: circle(25% at 20%);
+    background-color: #2e57c9;
+    animation: circlemove 5000ms 1;
+}
+
+@keyframes circlemove {
+    0% {
+        clip-path: circle(25% at 20%);
+    }
+    25% {
+        clip-path: circle(20% at 50%);
+    }
+    50% {
+        clip-path: circle(25% at 80%);
+    }
+    75% {
+        clip-path: circle(20% at 40%);
+    }
+    100%{
+        clip-path: circle(25% at 20%);
+    }
+}
+
+.container-wrapper:hover .circle h1 {
+    clip-path: circle(25% at 80%);
 }
 
 .bg-blue {
